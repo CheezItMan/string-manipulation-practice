@@ -16,4 +16,8 @@ describe "sort_by_length" do
   it "will return an array of words by length, words that are of equal length will appear in the order they appear" do
     expect(sort_by_length("I love great awesome words")).must_equal ["I", "love", "great", "words", "awesome"]
   end
+
+  it "will sort a string where the smallest word starts as last" do
+    expect(sort_by_length("love great awesome words I")).must_equal ["I", "love", "great", "words", "awesome"]
+  end
 end
